@@ -1,0 +1,114 @@
+$dark-primary-color: #00796B;
+$primary-color: #009688;
+$light-primary-color: #B2DFDB;
+$text: #FFFFFF;
+
+$accent-color: #607D8B;
+$primary-text: #212121;
+$secondary-text: #757575;
+$divider-color: #BDBDBD;
+* {
+    box-sizing: border-box;
+    transition: .3s;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+p, ul, h1, h2 {
+    margin: 0;
+}
+.page-wrap {
+    overflow-x: hidden;
+}
+.container {
+    width: 1170px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+@media screen and (max-width: 1199px) and (min-width: 980px) {
+   .container {
+        width: 940px;
+    } 
+}
+@media screen and (max-width: 979px) and (min-width: 769px) {
+   .container {
+        width: 750px;
+        padding: 0 20px;
+    } 
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 35px;
+    }
+}
+section {
+    padding-top: 50px;
+}
+////////////////////////////////
+.flexbox {
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+}
+
+.column-direction {
+   -moz-box-orient: vertical;
+   -webkit-box-orient: vertical;
+   -ms-box-orient: vertical;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+}
+
+.justify-center {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}  
+
+///////////////////////////////
+.page-header {
+    &__panel {
+        padding: 30px;
+        ul {
+//            @extend .flexbox;
+//            @extend .justify-center;            
+        }
+        li {
+            display: inline;            
+        }
+        a {
+            padding: 5px 10px;
+            text-decoration: none;
+            color: $primary-text;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    &__promo {
+        height: 600px;
+        background: url('../img/main-bg.jpg') no-repeat;
+        background-size: cover;
+    }
+    &__title {
+        padding-top: 200px;
+        text-align: center;
+    }
+    &__description {
+        text-align: center;
+    }
+}
+
+.present-site {
+    &__header {
+        
+    }
+    &__item {
+        
+    }
+}
