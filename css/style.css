@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  transition: .3s;
 }
 
 body {
@@ -13,6 +12,10 @@ p, ul, h1, h2 {
 
 body, .page-wrap {
   overflow-x: hidden;
+}
+
+button {
+  transition: .3s;
 }
 
 .container {
@@ -119,6 +122,7 @@ section {
   height: 4px;
   background-color: #212121;
   border-radius: 2px;
+  transition: .7s;
 }
 
 .page-header__menu-toggle span::before {
@@ -214,6 +218,21 @@ section {
   .page-header__panel {
     padding: 15px 30px;
   }
+  .page-header__panel .row {
+    position: relative;
+  }
+  .page-header__shadow {
+    margin: 0;
+    position: absolute;
+    bottom: -13px;
+    width: 112%;
+    height: 1px;
+    left: -6%;
+    background: white;
+    box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    border: none;
+  }
   .page-header__menu {
     position: fixed;
     top: 63px;
@@ -227,6 +246,8 @@ section {
     -webkit-transform: translateX(240px);
         -ms-transform: translateX(240px);
             transform: translateX(240px);
+    box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.1);
+    transition: .3s;
   }
   .page-header__menu li {
     display: list-item;

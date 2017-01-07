@@ -14,8 +14,7 @@ $sm: 768px; //min
 $xs: 768px; //max
 
 * {
-    box-sizing: border-box;
-    transition: .3s;
+    box-sizing: border-box;    
 }
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -25,6 +24,9 @@ p, ul, h1, h2 {
 }
 body, .page-wrap {
     overflow-x: hidden;
+}
+button {
+    transition: .3s;
 }
 .container {
     width: 1170px;
@@ -122,6 +124,7 @@ section {
             margin-top: -2px;
             left: 50%;
             margin-left: -12px;
+            
             &::before, &::after {
               content: '';
               position: absolute;
@@ -130,6 +133,7 @@ section {
               height: 4px;
               background-color: $primary-text;          
               border-radius: 2px;
+              transition: .7s;
             }
             &::before {
                top: -8px; 
@@ -213,9 +217,24 @@ section {
 }
 
 @media screen and (max-width: $xs) {
-    .page-header {
+    .page-header {        
         &__panel {
             padding: 15px 30px;
+            .row {
+                position: relative;
+            }
+        }
+        &__shadow {
+            margin: 0;
+            position: absolute;
+            bottom: -13px;
+            width: 112%;
+            height: 1px;
+            left: -6%;
+            background: white;
+            box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
+            z-index: 3;
+            border: none;
         }
         &__menu {
             position: fixed;
@@ -228,6 +247,8 @@ section {
             line-height: 20px;
             overflow: auto;
             transform: translateX(240px);
+            box-shadow: -5px 0 5px 0 rgba(0,0,0,0.1);
+            transition: .3s;
             li {
                 display: list-item;
             }
