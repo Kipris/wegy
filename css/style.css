@@ -11,7 +11,7 @@ p, ul, h1, h2 {
   margin: 0;
 }
 
-.page-wrap {
+body, .page-wrap {
   overflow-x: hidden;
 }
 
@@ -47,7 +47,7 @@ section {
   padding-top: 50px;
 }
 
-.flexbox {
+.flexbox, .page-header__promo {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -68,10 +68,12 @@ section {
 
 .page-header__panel {
   padding: 30px;
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .page-header__panel li {
   display: inline;
+  list-style: none;
 }
 
 .page-header__panel a {
@@ -84,17 +86,177 @@ section {
   color: #009688;
 }
 
+.page-header__menu-checkbox {
+  display: none;
+}
+
+.page-header__menu-toggle {
+  display: none;
+  font-size: 0;
+  width: 36px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.page-header__menu-toggle span {
+  width: 24px;
+  height: 4px;
+  display: block;
+  background-color: #212121;
+  border-radius: 2px;
+  position: relative;
+  top: 50%;
+  margin-top: -2px;
+  left: 50%;
+  margin-left: -12px;
+}
+
+.page-header__menu-toggle span::before, .page-header__menu-toggle span::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 4px;
+  background-color: #212121;
+  border-radius: 2px;
+}
+
+.page-header__menu-toggle span::before {
+  top: -8px;
+}
+
+.page-header__menu-toggle span::after {
+  top: 8px;
+}
+
 .page-header__promo {
   height: 600px;
   background: url("../img/main-bg.jpg") no-repeat;
   background-size: cover;
+  position: relative;
+  color: #FFFFFF;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-header__promo::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 33, 33, 0.5);
+}
+
+.page-header__wrap {
+  padding: 0px 20px;
+  background: none;
+  display: inline-block;
+  width: 100%;
+  white-space: normal;
+  position: relative;
 }
 
 .page-header__title {
-  padding-top: 200px;
+  font-size: 45px;
+  font-weight: 300;
+  line-height: 48px;
   text-align: center;
 }
 
 .page-header__description {
+  font-weight: 300;
+  font-size: 55px;
+  line-height: 60px;
+  padding-bottom: 35px;
   text-align: center;
+}
+
+.page-header__actions {
+  text-align: center;
+}
+
+.page-header__action-button {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  display: inline-block;
+  width: 100%;
+  max-width: 158px;
+  margin: 0 2px;
+  padding: 13px 20px 14px;
+  border-radius: 1000px;
+}
+
+.page-header__action-button--order-now {
+  background-color: #009688;
+}
+
+.page-header__action-button--order-now:hover {
+  background-color: #212121;
+}
+
+.page-header__action-button--learn-more {
+  border: 1px solid #FFFFFF;
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+
+.page-header__action-button--learn-more:hover {
+  background-color: #FFFFFF;
+  color: #009688;
+}
+
+@media screen and (max-width: 768px) {
+  .page-header__menu {
+    position: absolute;
+    top: 92px;
+    z-index: 2;
+    background-color: white;
+    right: 0;
+    bottom: -20px;
+    width: 240px;
+    line-height: 20px;
+    overflow: auto;
+    -webkit-transform: translateX(240px);
+        -ms-transform: translateX(240px);
+            transform: translateX(240px);
+  }
+  .page-header__menu li {
+    display: list-item;
+  }
+  .page-header__menu-toggle {
+    display: inline-block;
+  }
+  .page-header__menu-checkbox:checked + .page-header__menu-toggle + .page-header__menu {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .page-header__menu-checkbox:checked + .page-header__menu-toggle span {
+    background-color: transparent;
+  }
+  .page-header__menu-checkbox:checked + .page-header__menu-toggle span::before,
+  .page-header__menu-checkbox:checked + .page-header__menu-toggle span::after {
+    top: 0;
+  }
+  .page-header__menu-checkbox:checked + .page-header__menu-toggle span::before {
+    -webkit-transform: rotate(405deg);
+        -ms-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+  .page-header__menu-checkbox:checked + .page-header__menu-toggle span::after {
+    -webkit-transform: rotate(-405deg);
+        -ms-transform: rotate(-405deg);
+            transform: rotate(-405deg);
+  }
+}
+
+@media (max-width: 479px) {
+  .page-header__action-button {
+    margin-bottom: 10px;
+  }
 }

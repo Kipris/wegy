@@ -11,34 +11,59 @@
 </head>
 <body>
     <div class="page-wrap">
-        <header class="page-header">
+        <header class="page-header">            
             <div class="page-header__panel">
                 <div class="row">
-                    <div class="page-header__logo col-lg-2">
+                    <div class="page-header__logo 
+                       col-lg-2
+                       col-md-2
+                       col-sm-2
+                       col-xs-2
+                       ">
                         <div class="box-row">
                             
                         </div>
                     </div>
-                    <div class="page-header__navigation col-lg-10 end-lg">
+                    <div class="page-header__navigation 
+                      col-lg-10 end-lg
+                      col-md-10 end-md
+                      col-sm-10 end-sm
+                      col-xs-10 end-xs
+                      ">
                        <div class="box-row">
-                           <ul>
+                            
+                            
+                            <input type="checkbox" name="menu" id="menu" class="page-header__menu-checkbox">
+                            <label for="menu" class="page-header__menu-toggle"><span></span></label>
+                            
+                            <ul class="page-header__menu">
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">Pages</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#">Shop</a></li>
                                 <li><a href="#">Contacts</a></li>
                             </ul> 
-                        </div>                        
+                            
+                        </div> 
+                                               
                     </div>
                 </div>
                 
                 
             </div>
+
             <div class="page-header__promo">
-                <h1 class="page-header__title">
+                <div class="page-header__wrap">
+                    <h1 class="page-header__title">
                        Create cute websites                        
-                </h1>
-                <p class="page-header__description">fast with us!</p>                           
+                    </h1>
+                    <p class="page-header__description">fast with us!</p> 
+                    <div class="page-header__actions">
+                        <a href="#" class="page-header__action-button page-header__action-button--order-now">Order now</a>
+                        <a href="#" class="page-header__action-button page-header__action-button--learn-more">Learn more</a>
+                    </div>
+                </div>
+                                          
             </div>
         </header>
         <section class="present-site">
