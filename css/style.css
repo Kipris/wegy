@@ -89,6 +89,10 @@ section {
   color: #009688;
 }
 
+.page-header__panel hr {
+  display: none;
+}
+
 .page-header__menu-checkbox {
   display: none;
 }
@@ -220,6 +224,9 @@ section {
   }
   .page-header__panel .row {
     position: relative;
+  }
+  .page-header__panel hr {
+    display: block;
   }
   .page-header__shadow {
     margin: 0;

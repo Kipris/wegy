@@ -103,6 +103,9 @@ section {
                 color: $primary-color;
             }
         }
+        hr {
+            display: none;
+        }
     }
     &__menu-checkbox {
         display: none;
@@ -222,6 +225,9 @@ section {
             padding: 15px 30px;
             .row {
                 position: relative;
+            }
+            hr {
+                display: block;
             }
         }
         &__shadow {
