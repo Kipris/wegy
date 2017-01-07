@@ -211,9 +211,12 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+  .page-header__panel {
+    padding: 15px 30px;
+  }
   .page-header__menu {
-    position: absolute;
-    top: 92px;
+    position: fixed;
+    top: 63px;
     z-index: 2;
     background-color: white;
     right: 0;

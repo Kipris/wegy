@@ -214,9 +214,12 @@ section {
 
 @media screen and (max-width: $xs) {
     .page-header {
+        &__panel {
+            padding: 15px 30px;
+        }
         &__menu {
-            position: absolute;
-            top: 92px;
+            position: fixed;
+            top: 63px;
             z-index: 2;
             background-color: white;
             right: 0;
