@@ -12,6 +12,7 @@ body {
 
 p, ul {
   margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -82,6 +83,14 @@ section {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+}
+
+.end-lg,
+.end-md,
+.end-sm,
+.end-xs {
+  display: -ms-flexbox;
+  -ms-flex-pack: end;
 }
 
 .page-header__panel {
@@ -242,15 +251,13 @@ section {
   .page-header__panel .row {
     position: relative;
   }
-  .page-header__panel hr {
-    display: block;
-  }
   .page-header__shadow {
+    display: block;
     margin: 0;
     position: absolute;
     bottom: -15px;
     width: 120%;
-    height: 15px;
+    height: 67px;
     left: -10%;
     background: white;
     box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -259,7 +266,7 @@ section {
   }
   .page-header__menu {
     position: fixed;
-    top: 63px;
+    top: 60px;
     z-index: 2;
     background-color: white;
     right: 0;
@@ -276,8 +283,23 @@ section {
   .page-header__menu li {
     display: list-item;
   }
+  .page-header__menu li:first-child {
+    margin-top: 7px;
+  }
+  .page-header__menu a {
+    padding: 14px 25px 16px;
+    display: block;
+    color: #009688;
+    transition: all 0.2s ease;
+  }
+  .page-header__menu a:hover {
+    color: #fff;
+    background-color: #00796B;
+  }
   .page-header__menu-toggle {
     display: inline-block;
+    position: relative;
+    z-index: 4;
   }
   .page-header__menu-checkbox:checked + .page-header__menu-toggle + .page-header__menu {
     -webkit-transform: translateX(0);

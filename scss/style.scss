@@ -8,6 +8,8 @@ $primary-text: #212121;
 $secondary-text: #757575;
 $divider-color: #BDBDBD;
 
+$showcase-color: #f6f8fa;
+
 $lg: 1200px; //min
 $md: 992px; //min
 $sm: 768px; //min
@@ -25,6 +27,7 @@ body {
 }
 p, ul {
     margin: 0;
+    padding: 0;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
@@ -95,6 +98,14 @@ section {
     
 }
 
+///////////////////////////////
+.end-lg,
+.end-md,
+.end-sm,
+.end-xs {
+    display: -ms-flexbox;
+    -ms-flex-pack: end;
+}
 ///////////////////////////////
 .page-header {    
     &__panel {
@@ -241,16 +252,14 @@ section {
             .row {
                 position: relative;
             }
-            hr {
-                display: block;
-            }
         }
         &__shadow {
+            display: block;
             margin: 0;
             position: absolute;
             bottom: -15px;
             width: 120%;
-            height: 15px;
+            height: 67px;
             left: -10%;
             background: white;
             box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -259,7 +268,7 @@ section {
         }
         &__menu {
             position: fixed;
-            top: 63px;
+            top: 60px;
             z-index: 2;
             background-color: white;
             right: 0;
@@ -269,13 +278,28 @@ section {
             overflow: auto;
             transform: translateX(250px);
             box-shadow: -5px 0 5px 0 rgba(0,0,0,0.1);
-            transition: .3s;
+            transition: .3s;            
             li {
                 display: list-item;
+                &:first-child {
+                    margin-top: 7px;
+                }
+            }
+            a {
+                padding: 14px 25px 16px;
+                display: block;
+                color: $primary-color;
+                transition: all 0.2s ease;                
+                &:hover {
+                    color: #fff;
+                    background-color: $dark-primary-color;
+                }
             }
         }
         &__menu-toggle {
             display: inline-block;
+            position: relative;
+            z-index: 4;
         }
         
         //ADAPTIVE MENU LOGIC
