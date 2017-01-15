@@ -31,23 +31,17 @@
                       col-md-10 end-md
                       col-sm-10 end-sm
                       col-xs-9 end-xs
-                      ">
-                     
-                            
-                            
-                            <input type="checkbox" name="menu" id="menu" class="page-header__menu-checkbox">
-                            <label for="menu" class="page-header__menu-toggle"><span></span></label>
-                            
-                            <ul class="page-header__menu">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Pages</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Contacts</a></li>
-                            </ul> 
-                            
-                      
-                                               
+                      ">                        
+                        <input type="checkbox" name="menu" id="menu" class="page-header__menu-checkbox">
+                        <label for="menu" class="page-header__menu-toggle"><span></span></label>
+
+                        <ul class="page-header__menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>             
                     </div>
                 </div>
                 
@@ -62,10 +56,12 @@
                     <p class="page-header__description">fast with us!</p> 
                     <div class="page-header__actions">
                         <a href="#" class="page-header__action-button page-header__action-button--order-now">Order now</a>
-                        <a href="#" class="page-header__action-button page-header__action-button--learn-more">Learn more</a>
-                    </div>
+<!--                        <a href="#" class="page-header__action-button page-header__action-button--learn-more">Learn more</a>-->                
+                    </div>                   
                 </div>
-                                          
+                <div class="page-header__mouse-icon">
+                    <div class="page-header__mouse-wheel"></div>
+                </div>                          
             </div>
         </header>
         <section class="present-site">
@@ -76,7 +72,7 @@
                 </p>
                 <div class="row">
                     <div class="present-site__item col-lg-4 col-md-4 col-sm-12 col-xs-12">  
-                        <a href="#" class="present-site__item-image">
+                        <a class="present-site__item-image">
                             <img src="img/page1-img1.jpg" alt="">
                         </a>      
                         <h3 class="present-site__item-title">Responsive Design</h3>
@@ -85,7 +81,7 @@
                         </p>                       
                     </div>
                     <div class="present-site__item col-lg-4 col-md-4 col-sm-12 col-xs-12">           
-                        <a href="#" class="present-site__item-image">
+                        <a class="present-site__item-image">
                             <img src="img/page1-img1.jpg" alt="">
                         </a>  
                         <h3 class="present-site__item-title">Built for mobile and up</h3>
@@ -94,7 +90,7 @@
                         </p>
                     </div>
                     <div class="present-site__item col-lg-4 col-md-4 col-sm-12 col-xs-12">           
-                        <a href="#" class="present-site__item-image">
+                        <a class="present-site__item-image">
                             <img src="img/page1-img1.jpg" alt="">
                         </a>  
                         <h3 class="present-site__item-title">Variant Builder included</h3>
@@ -108,47 +104,151 @@
         
         <section class="showcase">
             <div class="container">
-                <div class="showcase__item">
-<!--   
-code
-airplanemode active             
-important devices
-settings applications / settings
--->
-
-
-                    <div class="showcase__icon">
-                        <i class="material-icons">code</i>
+                <h2 class="showcase__title">
+                    Services
+                </h2>
+                <div class="row">                    
+                    <div class="showcase__item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="showcase__item-icon">
+                            <i class="material-icons">code</i>
+                        </div>
+                       
+                            <h4 class="showcase__item-title">Markup</h4>
+                            <ul class="showcase__item-description">
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                            </ul>
+                            <a class="showcase__item-price">от 50$</a>
+                       
+                        
                     </div>
-                    <div class="showcase__title">Markup</div>
-                    <div class="showcase__description"></div>
-                    <div class="showcase__more"></div>
-                </div>
-                <div class="showcase__item">
-                    <div class="showcase__icon">
-                        <i class="material-icons">airplanemode_active</i>
+                    <div class="showcase__item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="showcase__item-icon">
+                            <i class="material-icons">airplanemode_active</i>
+                        </div>
+                        
+                            <h4 class="showcase__item-title">Landing Page</h4>
+                            <ul class="showcase__item-description">
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                            </ul>
+                            <a class="showcase__item-price">от 50$</a>
+                                             
                     </div>
-                    <div class="showcase__title">Landing Page</div>
-                    <div class="showcase__description"></div>
-                    <div class="showcase__more"></div>
-                </div>
-                <div class="showcase__item">
-                    <div class="showcase__icon">
-                        <i class="material-icons">important_devices</i>
+                    <div class="showcase__item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="showcase__item-icon">
+                            <i class="material-icons">important_devices</i>
+                        </div>
+                       
+                            <h4 class="showcase__item-title">Business Card</h4>
+                            <ul class="showcase__item-description">
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                            </ul>
+                            <a class="showcase__item-price">от 50$</a>
+                    
                     </div>
-                    <div class="showcase__title">Business Card</div>
-                    <div class="showcase__description"></div>
-                    <div class="showcase__more"></div>
-                </div>
-                <div class="showcase__item">
-                    <div class="showcase__icon">
-                        <i class="material-icons">settings</i>
+                    <div class="showcase__item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="showcase__item-icon">
+                            <i class="material-icons">settings</i>
+                        </div>
+                        
+                        <h4 class="showcase__item-title">Integration with CMS</h4>
+                            <ul class="showcase__item-description">
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                                <li>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</li>
+                            </ul>
+                            <a class="showcase__item-price">от 50$</a>
+                     
                     </div>
-                    <div class="showcase__title">Integration with CMS</div>
-                    <div class="showcase__description"></div>
-                    <div class="showcase__more"></div>
                 </div>
             </div>
+                
+        </section>
+        
+        <section class="about">
+            <div class="container">
+                <h2 class="about__title">
+                    About me
+                </h2>
+                <div class="row">
+                    <div class="about__description">
+                        Рад приветствовать Вас на моем личном сайте! Меня зовут Владимир Батов. 
+                        Уже больше 6 лет я занимаюсь разработкой, дизайном и обслуживанием сайтов.
+                        Мои профиль с отзывами о моих услугах вы можете посмотреть на крупнейшем
+                        фриланс-портале в рунете fl.ru/users/resident48.
+                        Мой рабочий офис - это мой уютный дом, а клиенты - это люди из разных точек Земли.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+               <div class="portfolio__heading">
+                    <h2>Portfolio</h2>
+               </div> 
+               <div class="row">                   
+                  <div class="portfolio__wrap">
+                      <div class="hovereffect">
+                          <img class="img-responsive" src="img/blueasy.png" alt="img">
+                          <div class="overlay">
+                             <h3>Blueasy</h3>
+                             <a class="info" href="#">show</a>
+                          </div>
+                      </div>            
+                  </div>  
+
+                  <div class="portfolio__wrap">
+                      <div class="hovereffect">
+                          <img class="img-responsive" src="img/resto.png" alt="img">
+                          <div class="overlay">
+                             <h3>Resto</h3>
+                             <a class="info" href="#">show</a>
+                          </div>
+                      </div>            
+                  </div> 
+
+                  <div class="portfolio__wrap">
+                      <div class="hovereffect">
+                          <img class="img-responsive" src="img/fitness.png" alt="img">
+                          <div class="overlay">
+                             <h3>Fitness</h3>
+                             <a class="info" href="#">show</a>
+                          </div>
+                      </div>            
+                  </div>                            
+               </div>
+           </div>        
+        </section>
+        <section id="order" class="order">
+           <div class="container">
+               <div class="order__heading">
+                    <h2>Order now</h2>
+               </div> 
+               <div class="row">
+                  <form action="#" class="order__form col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                      <div class="order__form-group">
+                          <label>Ваше имя</label>
+                          <input type="text">
+                      </div>
+                      <div class="order__form-group">
+                          <label>Ваша почта</label>
+                          <input type="text">
+                      </div>
+                      <div class="order__form-group">
+                          <label>Сообщение</label>
+                          <textarea name="" id="" cols="30" rows="10"></textarea>
+                      </div>
+                      <button class="order__btn">Отправить</button>  
+                  </form>
+                   
+               </div>
+            </div>        
         </section>
     </div>
     <script>
