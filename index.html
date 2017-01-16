@@ -9,11 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="lib/flexboxgrid/flexboxgrid.min.css">
     <link rel="stylesheet" href="lib/normalize/normalize.css">
+    <link rel="stylesheet" href="lib/animate.min.css">
+    <link rel="stylesheet" href="lib/owlcarousel/owlcarousel.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="page-wrap">
-        <header class="page-header">            
+        <header id="page-header" class="page-header">            
             <div class="page-header__panel">
                 <div class="row">
                     <hr class="page-header__shadow">
@@ -24,7 +26,8 @@
                        col-sm-2
                        col-xs-3
                        ">
- 
+                        <span class="logo"></span>
+                        <label>Webby</label> 
                     </div>
                     <div class="page-header__navigation 
                       col-lg-10 end-lg
@@ -36,11 +39,12 @@
                         <label for="menu" class="page-header__menu-toggle"><span></span></label>
 
                         <ul class="page-header__menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Contacts</a></li>
+                            <li><a id="js-scroll-home" href="#">Home</a></li>
+                            <li><a id="js-scroll-services" href="#">Services</a></li>
+                            <li><a id="js-scroll-about" href="#">About me</a></li>
+                            <li><a id="js-scroll-portfolio" href="#">Portfolio</a></li>
+                            <li><a id="js-scroll-testimonials" href="#">Testimonials</a></li>
+                            <li><a class="js-scroll-order" href="#">Order</a></li>
                         </ul>             
                     </div>
                 </div>
@@ -55,7 +59,7 @@
                     </h1>
                     <p class="page-header__description">fast with us!</p> 
                     <div class="page-header__actions">
-                        <a href="#" class="page-header__action-button page-header__action-button--order-now">Order now</a>
+                        <a class="page-header__action-button page-header__action-button--order-now js-scroll-order">Order now</a>
 <!--                        <a href="#" class="page-header__action-button page-header__action-button--learn-more">Learn more</a>-->                
                     </div>                   
                 </div>
@@ -71,7 +75,7 @@
                     We are the unique set-up, that is ready to challenge and knock out such a global problem as unemployment. Our company gladly helps those, who are ready to learn, to develop and to gain new experience. company unifies people all over the world. Everything we do, we do it for YOU - totally gratuitously and with great enjoyment. We work so that you could work!
                 </p>
                 <div class="row">
-                    <div class="present-site__item col-lg-4 col-md-4 col-sm-12 col-xs-12">  
+                    <div class="present-site__item animated col-lg-4 col-md-4 col-sm-12 col-xs-12">  
                         <a class="present-site__item-image">
                             <img src="img/page1-img1.jpg" alt="">
                         </a>      
@@ -80,7 +84,7 @@
                             Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incid idunt ut labor.
                         </p>                       
                     </div>
-                    <div class="present-site__item col-lg-4 col-md-4 col-sm-12 col-xs-12">           
+                    <div class="present-site__item animated col-lg-4 col-md-4 col-sm-12 col-xs-12">           
                         <a class="present-site__item-image">
                             <img src="img/page1-img1.jpg" alt="">
                         </a>  
@@ -89,7 +93,7 @@
                             Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incid idunt ut labor.
                         </p>
                     </div>
-                    <div class="present-site__item col-lg-4 col-md-4 col-sm-12 col-xs-12">           
+                    <div class="present-site__item animated col-lg-4 col-md-4 col-sm-12 col-xs-12">           
                         <a class="present-site__item-image">
                             <img src="img/page1-img1.jpg" alt="">
                         </a>  
@@ -102,13 +106,13 @@
             </div>            
         </section>
         
-        <section class="showcase">
+        <section id="services" class="showcase">
             <div class="container">
                 <h2 class="showcase__title">
                     Services
                 </h2>
                 <div class="row">                    
-                    <div class="showcase__item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="showcase__item animated col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <div class="showcase__item-icon">
                             <i class="material-icons">code</i>
                         </div>
@@ -123,7 +127,7 @@
                        
                         
                     </div>
-                    <div class="showcase__item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="showcase__item animated col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <div class="showcase__item-icon">
                             <i class="material-icons">airplanemode_active</i>
                         </div>
@@ -137,7 +141,7 @@
                             <a class="showcase__item-price">от 50$</a>
                                              
                     </div>
-                    <div class="showcase__item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="showcase__item animated col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <div class="showcase__item-icon">
                             <i class="material-icons">important_devices</i>
                         </div>
@@ -151,7 +155,7 @@
                             <a class="showcase__item-price">от 50$</a>
                     
                     </div>
-                    <div class="showcase__item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="showcase__item animated col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <div class="showcase__item-icon">
                             <i class="material-icons">settings</i>
                         </div>
@@ -170,13 +174,11 @@
                 
         </section>
         
-        <section class="about">
+        <section id="about" class="about">
             <div class="container">
-                <h2 class="about__title">
-                    About me
-                </h2>
+                <h2 class="about__title">About me</h2>
                 <div class="row">
-                    <div class="about__description">
+                    <div class="about__description col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         Рад приветствовать Вас на моем личном сайте! Меня зовут Владимир Батов. 
                         Уже больше 6 лет я занимаюсь разработкой, дизайном и обслуживанием сайтов.
                         Мои профиль с отзывами о моих услугах вы можете посмотреть на крупнейшем
@@ -189,11 +191,11 @@
         
         <section id="portfolio" class="portfolio">
             <div class="container">
-               <div class="portfolio__heading">
-                    <h2>Portfolio</h2>
-               </div> 
+               
+               <h2 class="portfolio__title">Portfolio</h2>
+              
                <div class="row">                   
-                  <div class="portfolio__wrap">
+                  <div class="portfolio__wrap col-lg-3 col-md-3 col-sm-6 col-xs-12">
                       <div class="hovereffect">
                           <img class="img-responsive" src="img/blueasy.png" alt="img">
                           <div class="overlay">
@@ -203,7 +205,7 @@
                       </div>            
                   </div>  
 
-                  <div class="portfolio__wrap">
+                  <div class="portfolio__wrap col-lg-3 col-md-3 col-sm-6 col-xs-12">
                       <div class="hovereffect">
                           <img class="img-responsive" src="img/resto.png" alt="img">
                           <div class="overlay">
@@ -213,7 +215,7 @@
                       </div>            
                   </div> 
 
-                  <div class="portfolio__wrap">
+                  <div class="portfolio__wrap col-lg-3 col-md-3 col-sm-6 col-xs-12">
                       <div class="hovereffect">
                           <img class="img-responsive" src="img/fitness.png" alt="img">
                           <div class="overlay">
@@ -225,6 +227,30 @@
                </div>
            </div>        
         </section>
+        
+        <section id="testimonials" class="testimonials">            
+            <div class="container">
+               <h2 class="testimonials__title">Отзывы</h2>
+                <div class="row">
+                    <div id="carousel" class="testimonials__carousel">
+                        <div class="testimonials__carousel-item col-lg-10">
+                           <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, laudantium et! Molestias rerum cumque consequatur laudantium laboriosam repellat delectus voluptate eveniet officiis expedita, aspernatur consequuntur modi ipsam deleniti repellendus voluptates.</h4>
+                           <p>Алесандр Круглик - Источник отзыва: 
+                               <a href="freelance.ua">freelance.ua</a>
+                           </p>
+                            
+                        </div>
+                        <div class="testimonials__carousel-item col-lg-10">
+                           <h4>Molestias rerum cumque consequatur laudantium laboriosam repellat delectus voluptate eveniet officiis expedita, aspernatur consequuntur modi ipsam deleniti repellendus voluptates.</h4>
+                           <p>Алесандр Круглик - Источник отзыва: 
+                               <a href="freelance.ua">freelance.ua</a>
+                           </p>                            
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </section>
+        
         <section id="order" class="order">
            <div class="container">
                <div class="order__heading">
@@ -251,7 +277,95 @@
             </div>        
         </section>
     </div>
+    
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/waypoints.min.js"></script>
+    <script src="lib/animate-css.js"></script>
+    <script src="lib/owlcarousel/owlcarousel.min.js"></script>
+    
     <script>
+    //MENU TRANSFORM ONSCROLL
+    $(document).ready(function () {
+        let topMenu = $('.page-header');
+        checkMenuPosition();
+        $(window).scroll(function() {        
+            checkMenuPosition();
+        });
+
+        function checkMenuPosition() {
+            if ($(window).scrollTop() > $(window).height() - 150) {
+                $('.page-header__panel').css('padding', '15px 30px');
+            } else {
+                $('.page-header__panel').css('padding', '20px 30px');
+            }
+        }
+    });
+        
+    //ANIMATE
+        $(document).ready(function () {
+            $('.present-site__item').animated('fadeIn', 'fadeIn');
+            $('.showcase__item').animated('fadeIn', 'fadeIn');
+        });
+    
+        
+    //SCROLL
+    $(document).ready(function () {
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+
+        function scrollToSection(handler, scrollTo) {
+            $(handler).click(function () {
+                $("html, body").animate({
+                    scrollTop: $(scrollTo).offset().top-50
+                }, 600);
+                return false;
+            });
+        }
+
+        scrollToSection('#js-scroll-home', "#page-header");
+        scrollToSection('#js-scroll-services', "#services");
+        scrollToSection('#js-scroll-about', "#about");
+        scrollToSection('#js-scroll-portfolio', "#portfolio");
+        scrollToSection('#js-scroll-testimonials', "#testimonials");
+        scrollToSection('.js-scroll-order', "#order");
+
+    });    
+      
+    //OWL CAROUSEL    
+    $(document).ready(function() {
+        $("#carousel").owlCarousel({                
+            loop: true,
+            margin: 0,
+            dotsEach: true,
+            pagination: true,                
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                500: {
+                   items:1 
+                },
+                770:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });   
+    });
+        
+    //PREVENT SCROLL
     let menuToggle = document.querySelector('.page-header__menu-toggle');
     let isMenuOpened = false;
     let keys = {32: 1, 33: 1, 34: 1, 37: 1, 38: 1, 39: 1, 40: 1};

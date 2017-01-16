@@ -121,14 +121,46 @@ section {
     -ms-flex-pack: end;
 }
 ///////////////////////////////
-.page-header {    
+.page-header {  
+    transition: .3s;
+    &__logo {
+        z-index: 10000;
+        span {
+            display: block;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: transparentize($primary-color, .3);
+            position: relative;
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background-color: transparentize($light-primary-color, .2);
+                top: 25%;
+                right: -8px;
+            }
+        }
+        label {
+            margin-top: -19px;
+            margin-left: 30px;
+            position: absolute;
+            color: $primary-text;
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
     &__panel {
         padding: 20px 30px;
         box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.1);
         position: fixed;
         width: 100%;
         background: #fff;
-        z-index: 10;
+        z-index: 10;  
+        transition: .3s;
         ul {
 //            @extend .flexbox;
 //            @extend .justify-center;            
@@ -191,8 +223,8 @@ section {
         }
     }
     &__promo {
-        height: 600px;
-        background: url('../img/main-bg.jpg') no-repeat;
+        height: 700px;
+        background: url('../img/main-bg-min.jpg') no-repeat;
         background-size: cover;
         background-attachment: fixed;
         position: relative;
@@ -235,6 +267,7 @@ section {
         text-align: center;
     }
     &__action-button {
+        cursor: pointer;
         text-decoration: none;
         color: $text;
         font-size: 18px;
@@ -361,7 +394,7 @@ section {
             background-color: white;
             right: 0;
             bottom: -20px;
-            width: 240px;
+            width: 180px;
             line-height: 20px;
             overflow: auto;
             transform: translateX(250px);
@@ -534,9 +567,16 @@ section {
         }
     }
 }
+@media screen and (max-width: $xs) {
+    .showcase {
+        &__item {        
+            padding: 0;
+        }
+    }
+}
 
 .about {
-    background: url(../img/about-bg.jpg) no-repeat;
+    background: url(../img/about-bg-min.jpg) no-repeat;
     background-size: cover;
     position: relative;
     background-position: bottom;
@@ -562,21 +602,21 @@ section {
 }
 
 .portfolio {
+    padding-bottom: 50px;
     .row {
         @extend .justify-center;  
     }
     &__wrap {
         padding: 5px;
-       @extend .flexbox;
+//        @extend .flexbox;
         width: 25%;
         flex-wrap: nowrap;
         min-width: 200px;
-        margin-bottom: 46px;
+//        margin-bottom: 46px;
         .hovereffect {
             position: relative;
-            max-height: 229px;
+            max-height: 350px;
             overflow: hidden;
-
         }
         img {
             width: 100%;
@@ -652,6 +692,76 @@ section {
         }
         &:hover .overlay {
             opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .portfolio {
+        .overlay {
+            opacity: 1;
+        }
+    }
+}
+
+.testimonials {
+    padding-bottom: 50px;
+    color: #fff;
+    background: url(../img/testimonials-bg-min.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: bottom;
+    background-attachment: fixed;
+    &__title {
+        color: #fff;
+    }
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: transparentize($primary-text, .1);
+    }
+    &__carousel-item {
+        h4 {
+           text-align: center;
+           margin-bottom: 25px;
+           font-size: 18px;
+           line-height: 34px; 
+        }
+        p {
+           text-align: center;
+           margin-bottom: 25px;
+           font-size: 16px;
+           line-height: 34px; 
+            a {
+                color: $light-primary-color;
+            }    
+        }
+    }  
+}
+
+.owl-carousel {
+    .owl-item {
+        @extend .flexbox;
+        @extend .justify-center;
+    }
+    .owl-controls {
+        text-align: center;
+//        text-align: -webkit-center;
+        .owl-dot {
+            width: 15px;
+            height: 15px;
+            background: $divider-color;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 5px;
+            &.active {
+                background: $primary-color;
+            }
         }
     }
 }
