@@ -378,9 +378,9 @@ section {
             display: block;
             margin: 0;
             position: absolute;
-            bottom: -15px;
+            bottom: -20px;
             width: 120%;
-            height: 67px;
+            height: 77px;
             left: -10%;
             background: white;
             box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -744,23 +744,26 @@ section {
     }  
 }
 
-.owl-carousel {
+.owl-theme {
     .owl-item {
         @extend .flexbox;
         @extend .justify-center;
     }
     .owl-controls {
         text-align: center;
-//        text-align: -webkit-center;
-        .owl-dot {
+        .owl-page {
             width: 15px;
-            height: 15px;
-            background: $divider-color;
+            height: 15px;            
             border-radius: 50%;
             display: inline-block;
             margin-left: 5px;
+            span {
+                background: $divider-color; 
+            }
             &.active {
-                background: $primary-color;
+                span {
+                   background: $primary-color; 
+                }                
             }
         }
     }
@@ -833,3 +836,103 @@ section {
         }
     }
 }
+
+
+//MODAL
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow-y: hidden; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family: 'Open Sans', sans-serif; 
+    color: black;
+}
+
+.modal-content {
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -330px;
+    top: 50%;
+    margin-top: -78.5px;
+    padding: 20px;
+    width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 2px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+} 
+
+.modal-header {
+    font-size: 24px;
+    @extend .flexbox;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    h4 {
+        margin: 0;
+    }    
+}
+
+.modal-body {
+    &__icon {
+        width: 50px;
+        height: 50px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        position: relative;
+        margin-left: 10px;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 3px;
+            height: 20px;
+            background-color: #fff;
+            top: 40%;
+            left: 26%;
+            transform: rotate(-45deg);
+            border-radius: 10px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 3px;
+            height: 30px;
+            background-color: #fff;
+            top: 23%;
+            left: 58%;
+            transform: rotate(45deg);
+            border-radius: 10px;
+        }
+    }
+    &__text {
+        margin-top: 13px;
+        margin-left: 50px;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.close:hover,
+.close:focus {
+    // color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+

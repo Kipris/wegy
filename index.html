@@ -257,25 +257,44 @@
                     <h2>Order now</h2>
                </div> 
                <div class="row">
-                  <form action="#" class="order__form col-lg-10 col-md-10 col-sm-12 col-xs-12">
+<!--                  <form action="#" class="order__form col-lg-10 col-md-10 col-sm-12 col-xs-12">-->
+                  <div class="order__form col-lg-10 col-md-10 col-sm-12 col-xs-12">
                       <div class="order__form-group">
                           <label>Ваше имя</label>
                           <input type="text">
                       </div>
                       <div class="order__form-group">
                           <label>Ваша почта</label>
-                          <input type="text">
+                          <input type="email">
                       </div>
                       <div class="order__form-group">
                           <label>Сообщение</label>
                           <textarea name="" id="" cols="30" rows="10"></textarea>
                       </div>
-                      <button class="order__btn">Отправить</button>  
-                  </form>
+                      <button id="submit" type="" class="order__btn js-open-modal">Отправить</button>  
+                  </div>
+<!--                  </form>-->
                    
                </div>
             </div>        
         </section>
+        
+        <div id="success-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4>Заказ принят успешно</h4>
+                <span id="close-modal" class="close">&#9587;</span>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="modal-body__icon"></div>
+                    <div class="modal-body__text">Ожидайте, в ближайшее время с вами свяжутся</div> 
+                </div>                               
+            </div>
+          </div>
+        </div>
+        
+        
     </div>
     
     <script src="lib/jquery/jquery.min.js"></script>
@@ -284,6 +303,21 @@
     <script src="lib/owlcarousel/owlcarousel.min.js"></script>
     
     <script>
+    //MODAL
+    $(document).ready(function () {
+        let modal = $('#success-modal');
+        let orderBtn = $('.js-open-modal');
+        let closeBtn = $('#close-modal');
+
+        orderBtn.click(function() {
+            modal.fadeIn('fast');
+        });
+
+        closeBtn.click(function() {
+            modal.fadeOut('fast');       
+        });
+    });    
+        
     //MENU TRANSFORM ONSCROLL
     $(document).ready(function () {
         let topMenu = $('.page-header');
@@ -339,29 +373,11 @@
       
     //OWL CAROUSEL    
     $(document).ready(function() {
-        $("#carousel").owlCarousel({                
-            loop: true,
-            margin: 0,
-            dotsEach: true,
-            pagination: true,                
-            autoplay: true,
-            autoplayTimeout: 4000,
-            autoplayHoverPause: true,
-            responsiveClass: true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                500: {
-                   items:1 
-                },
-                770:{
-                    items:1
-                },
-                1000:{
-                    items:1
-                }
-            }
+        $("#carousel").owlCarousel({
+            navigation : false,
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true
         });   
     });
         
